@@ -37,7 +37,7 @@ const userSchema = mongoose.Schema({
     required: true,
     unique: true,
     validate: {
-      validator: function (phoneNumber) {
+      validator: (phoneNumber) => {
         const phoneUtil = PhoneNumberUtil.getInstance();
         try {
           const parsedNumber = phoneUtil.parse(phoneNumber, "ZZ"); // 'ZZ' represents an unknown region
