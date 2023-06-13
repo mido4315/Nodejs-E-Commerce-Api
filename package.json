@@ -1,0 +1,16 @@
+{
+  "name": "e-commerce-app",
+  "version": "1.0.0",
+  "description": "flutter E-Commerce Application",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "mohamed mahmoud",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2",
+    "http": "^0.0.1-security",
+    "mongoose": "^7.2.4"
+  }
+}
