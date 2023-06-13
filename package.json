@@ -11,6 +11,7 @@
   "license": "ISC",
   "dependencies": {
     "express": "^4.18.2",
+    "google-libphonenumber": "^3.2.32",
     "http": "^0.0.1-security",
     "mongoose": "^7.2.4"
   },
