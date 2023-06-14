@@ -3,8 +3,7 @@ const mongoose = require("mongoose");
 const authRouter = require("./routes/auth");
 const PORT = 6969;
 const DBC =
-  "mongodb+srv://mido431:XBv6a32erHU4T1He@e-commerce-app.ejksezw.mongodb.net/";
-
+ "mongodb+srv://mido431:XBv6a32erHU4T1He@e-commerce-app.ejksezw.mongodb.net/";
 const app = express();
 
 app.use(express.json());

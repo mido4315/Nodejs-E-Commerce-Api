@@ -15,7 +15,7 @@ authRouter.post("/api/signup", async (req, res) => {
       });
     }
     const hPassword = await bcrypt.hash(password, 8);
-    let user = User({ name, email, password : hPassword, phoneNumber, address });
+    let user = User({ name, email, password: hPassword, phoneNumber, address });
     user = await user.save();
     res.json(user);
   } catch (e) {
@@ -23,4 +23,21 @@ authRouter.post("/api/signup", async (req, res) => {
   }
 });
 
+authRouter.post("/api/register", async (req, res) => {
+  try {
+    const { email, password } = req.body;
+    const existingUSer = await User.findOne({ email });
+    if (!existingUSer) {
+      return res.status(400).json({
+        msg: "The email address provided doesn\'t exist"
+      })
+    }
+
+    const isMatched = bcrypt.compare(password, existingUSer.password);
+
+
+  } catch (e) {
+    res.status(500).json({ error: e.message });
+  }
+})
 module.exports = authRouter;
